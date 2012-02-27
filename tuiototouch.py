@@ -62,7 +62,7 @@ class Device(object):
     def emit(self, event, value, syn=True):
         evtype, evcode = event
         print "type :%d code : %d value : %d" % (evtype, evcode, value)
-        self.device.emit(event, value, syn)
+        self.device.emit(event, int(value), syn)
 
 class DeviceWME(Device):
 
